@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#EFE9D9">
+    <title>DLA Repository</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IM Fell DW Pica', serif;
+            background-color: #EFE9D9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            position: absolute;
+            top: 2rem;
+            font-size: 2rem;
+            color: #100A14;
+            margin: 0;
+        }
+
+        .rotating-container {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: rotate 8s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>DLA Repository</h1>
+    
+    <div class="rotating-container">
+        <svg viewBox="0 0 200 200">
+            <defs>
+                <path
+                    id="circlePath"
+                    d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
+                />
+            </defs>
+            <text font-size="10pt" fill="#100A14" font-family="'IM Fell DW Pica', serif">
+                <textPath href="#circlePath" startOffset="0%">
+                    In progress · In progress · In progress · 
+                </textPath>
+            </text>
+        </svg>
+    </div>
+</body>
+</html>
